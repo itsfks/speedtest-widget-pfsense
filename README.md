@@ -18,6 +18,12 @@ Para realizar os testes de velocidade, você precisa instalar o `speedtest`.
 
 Informações de instalação estão disponíveis em: [Speedtest CLI Installation](https://www.speedtest.net/pt/apps/cli).
 
+Após a instalação use os comandos:
+```bash
+speedtest --accept-license
+speedtest --accept-gdpr
+```
+
 ## Criando o banco de dados
 
 1. **Acesse o MariaDB**:
@@ -115,3 +121,8 @@ Informações de instalação estão disponíveis em: [Speedtest CLI Installatio
    sudo systemctl status apidataspeedtest.service
    ```
    
+## Instalação do widget no pfSense
+1. Execute o comando:
+   ```bash
+   curl -o /usr/local/www/widgets/widgets/speedtest.widget.php https://raw.githubusercontent.com/itsfks/speedtest-widget-pfsense/refs/heads/main/pfsensewidget.php
+   ```
